@@ -120,8 +120,11 @@ void Game::play() {
 				else if (x < 2 * playingRect.w) {
 					c = 1;
 				}
-				else {
+				else if (x < 3 * playingRect.w) {
 					c = 2;
+				}
+				else {
+					continue;
 				}
 				if ((0 <= y) && (y < playingRect.h)) {
 					r = 0;
@@ -129,8 +132,11 @@ void Game::play() {
 				else if (y < 2 * playingRect.h) {
 					r = 1;
 				}
-				else {
+				else if (y < 3 * playingRect.h) {
 					r = 2;
+				}
+				else {
+					continue;
 				}
 				if (turn == 1) {
 					board.getHMove(r, c, currentPlayer);
