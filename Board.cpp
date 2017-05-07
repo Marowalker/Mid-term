@@ -199,7 +199,7 @@ CoOr Board::corners() {
 
 bool Board::special(char player, char AI) {
 	if (board[1][1] == AI) {
-		if ((board[0][0] == board[1][1]) && (board[1][1] == player)) {
+		if ((board[0][0] == board[2][2]) && (board[2][2] == player)) {
 			return true;
 		}
 		else if ((board[0][2] == board[2][0]) && (board[0][2] == player)) {
